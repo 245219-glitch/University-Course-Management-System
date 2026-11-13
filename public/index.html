@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UniSphere - One Campus. One Platform. Endless Possibilities.</title>
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css"></head>
+<body>
+<div class="landing">
+  <section>
+    <div class="brand" style="padding:0"><img src="/assets/logo.svg" alt="">UniSphere</div>
+    <h1>One campus.<br>One platform.<br>Endless possibilities.</h1>
+    <p class="lead">Register for courses, follow your timetable, hand in assignments and watch your grades grow. Teachers run their classes and administrators keep the whole university in view.</p>
+    <div class="roles">
+      <div class="role"><i style="background:var(--primary)"></i><div><b>Students</b>Enrol with one click. We check seats, prerequisites and timetable clashes for you.</div></div>
+      <div class="role"><i style="background:var(--sage)"></i><div><b>Faculty</b>Take attendance, publish materials and assignments, and grade in one place.</div></div>
+      <div class="role"><i style="background:var(--butter)"></i><div><b>Administrators</b>Manage people, courses, semesters and see how the university is doing.</div></div>
+    </div>
+  </section>
+  <section class="auth" aria-label="Sign in or register">
+    <div class="rolepick" role="radiogroup" aria-label="Sign in as">
+      <button type="button" class="rp on" data-role="student" role="radio" aria-checked="true">Student</button>
+      <button type="button" class="rp" data-role="faculty" role="radio" aria-checked="false">Teacher</button>
+      <button type="button" class="rp" data-role="admin" role="radio" aria-checked="false">Admin</button>
+    </div>
+    <div class="seg" role="tablist" id="seg"><button id="tabLogin" class="on" role="tab">Log in</button><button id="tabReg" role="tab">Create account</button></div>
+    <h2 id="portalTitle" style="margin-bottom:.8rem">Student login</h2>
+    <div id="msg"></div>
+    <form id="login" novalidate>
+      <div class="field"><label for="le">Email</label><input id="le" type="email" name="email" required autocomplete="username"></div>
+      <div class="field"><label for="lp">Password</label><div class="pw"><input id="lp" type="password" name="password" required autocomplete="current-password"><button type="button" class="toggle">Show</button></div></div>
+      <button class="btn block" id="loginBtn">Log in as student</button>
+      <div class="demo" id="demo"></div>
+    </form>
+    <form id="register" class="hidden" novalidate>
+      <div class="field"><label for="rn">Full name</label><input id="rn" type="text" name="full_name" required autocomplete="name"></div>
+      <div class="field"><label for="re">Email</label><input id="re" type="email" name="email" required autocomplete="email"></div>
+      <div class="field"><label for="rp">Password</label><div class="pw"><input id="rp" type="password" name="password" required minlength="8" autocomplete="new-password"><button type="button" class="toggle">Show</button></div><div class="muted small">At least 8 characters, with a letter and a number.</div></div>
+      <button class="btn block">Create student account</button>
+      <p class="muted small" style="margin-top:.8rem">Faculty and administrator accounts are created by the university administrator.</p>
+    </form>
+  </section>
+</div>
+<script src="/vendor/jquery.min.js"></script><script src="/js/core.js"></script><script src="/js/index.js"></script>
+</body></html>
